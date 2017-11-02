@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="findEntities">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findEntitiesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findEntitiesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findEntitiesBySchoolID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="schoolID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findEntitiesBySchoolIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findEntitiesBySchoolIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findEntitiesBySchoolIDAsXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="schoolID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="findEntitiesBySchoolIDAsXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="findEntitiesBySchoolIDAsXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEntityData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entityName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entityFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEntityDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEntityDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEntityDataBySchoolID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="schoolID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="entityName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entityFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEntityDataBySchoolIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEntityDataBySchoolIDResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEntityDataBySchoolIDAsXml">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="schoolID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="entityName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="entityFilter" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getEntityDataBySchoolIDAsXmlResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getEntityDataBySchoolIDAsXmlResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getExcelAddInData">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="schoolID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="columns" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="filters" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getExcelAddInDataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getExcelAddInDataResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReportDataByKey">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="reportDataKey" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getReportDataByKeyResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getReportDataByKeyResult">
+              <s:complexType mixed="true">
+                <s:sequence>
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getExcelAddInColumns">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="schoolID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="domain" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getExcelAddInColumnsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getExcelAddInColumnsResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validateExcelAddInAccount">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="schoolID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="validateExcelAddInAccountResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="validateExcelAddInAccountResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFMS6Data">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="schoolID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="dataRequestType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getFMS6DataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getFMS6DataResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="testDatabaseConnection">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="schoolID" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="testDatabaseConnectionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="testDatabaseConnectionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DataSet" nillable="true">
+        <s:complexType>
+          <s:sequence>
+            <s:element ref="s:schema" />
+            <s:any />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="findEntitiesSoapIn">
+    <wsdl:part name="parameters" element="tns:findEntities" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesSoapOut">
+    <wsdl:part name="parameters" element="tns:findEntitiesResponse" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDSoapIn">
+    <wsdl:part name="parameters" element="tns:findEntitiesBySchoolID" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDSoapOut">
+    <wsdl:part name="parameters" element="tns:findEntitiesBySchoolIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDAsXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:findEntitiesBySchoolIDAsXml" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDAsXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:findEntitiesBySchoolIDAsXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getEntityData" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getEntityDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDSoapIn">
+    <wsdl:part name="parameters" element="tns:getEntityDataBySchoolID" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDSoapOut">
+    <wsdl:part name="parameters" element="tns:getEntityDataBySchoolIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDAsXmlSoapIn">
+    <wsdl:part name="parameters" element="tns:getEntityDataBySchoolIDAsXml" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDAsXmlSoapOut">
+    <wsdl:part name="parameters" element="tns:getEntityDataBySchoolIDAsXmlResponse" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInDataSoapIn">
+    <wsdl:part name="parameters" element="tns:getExcelAddInData" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInDataSoapOut">
+    <wsdl:part name="parameters" element="tns:getExcelAddInDataResponse" />
+  </wsdl:message>
+  <wsdl:message name="getReportDataByKeySoapIn">
+    <wsdl:part name="parameters" element="tns:getReportDataByKey" />
+  </wsdl:message>
+  <wsdl:message name="getReportDataByKeySoapOut">
+    <wsdl:part name="parameters" element="tns:getReportDataByKeyResponse" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInColumnsSoapIn">
+    <wsdl:part name="parameters" element="tns:getExcelAddInColumns" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInColumnsSoapOut">
+    <wsdl:part name="parameters" element="tns:getExcelAddInColumnsResponse" />
+  </wsdl:message>
+  <wsdl:message name="validateExcelAddInAccountSoapIn">
+    <wsdl:part name="parameters" element="tns:validateExcelAddInAccount" />
+  </wsdl:message>
+  <wsdl:message name="validateExcelAddInAccountSoapOut">
+    <wsdl:part name="parameters" element="tns:validateExcelAddInAccountResponse" />
+  </wsdl:message>
+  <wsdl:message name="getFMS6DataSoapIn">
+    <wsdl:part name="parameters" element="tns:getFMS6Data" />
+  </wsdl:message>
+  <wsdl:message name="getFMS6DataSoapOut">
+    <wsdl:part name="parameters" element="tns:getFMS6DataResponse" />
+  </wsdl:message>
+  <wsdl:message name="testDatabaseConnectionSoapIn">
+    <wsdl:part name="parameters" element="tns:testDatabaseConnection" />
+  </wsdl:message>
+  <wsdl:message name="testDatabaseConnectionSoapOut">
+    <wsdl:part name="parameters" element="tns:testDatabaseConnectionResponse" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesHttpGetIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDHttpGetIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDAsXmlHttpGetIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDAsXmlHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataHttpGetIn">
+    <wsdl:part name="entityName" type="s:string" />
+    <wsdl:part name="entityFilter" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDHttpGetIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="entityName" type="s:string" />
+    <wsdl:part name="entityFilter" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDAsXmlHttpGetIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="entityName" type="s:string" />
+    <wsdl:part name="entityFilter" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDAsXmlHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInDataHttpGetIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="columns" type="s:string" />
+    <wsdl:part name="domain" type="s:string" />
+    <wsdl:part name="filters" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInDataHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getReportDataByKeyHttpGetIn">
+    <wsdl:part name="reportDataKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getReportDataByKeyHttpGetOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInColumnsHttpGetIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="domain" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInColumnsHttpGetOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="validateExcelAddInAccountHttpGetIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="validateExcelAddInAccountHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getFMS6DataHttpGetIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="dataRequestType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFMS6DataHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="testDatabaseConnectionHttpGetIn">
+    <wsdl:part name="schoolID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="testDatabaseConnectionHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesHttpPostIn">
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDHttpPostIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDAsXmlHttpPostIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="findEntitiesBySchoolIDAsXmlHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataHttpPostIn">
+    <wsdl:part name="entityName" type="s:string" />
+    <wsdl:part name="entityFilter" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDHttpPostIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="entityName" type="s:string" />
+    <wsdl:part name="entityFilter" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDAsXmlHttpPostIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="entityName" type="s:string" />
+    <wsdl:part name="entityFilter" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getEntityDataBySchoolIDAsXmlHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInDataHttpPostIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="columns" type="s:string" />
+    <wsdl:part name="domain" type="s:string" />
+    <wsdl:part name="filters" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInDataHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="getReportDataByKeyHttpPostIn">
+    <wsdl:part name="reportDataKey" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getReportDataByKeyHttpPostOut">
+    <wsdl:part name="Body" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInColumnsHttpPostIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="domain" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getExcelAddInColumnsHttpPostOut">
+    <wsdl:part name="Body" element="tns:DataSet" />
+  </wsdl:message>
+  <wsdl:message name="validateExcelAddInAccountHttpPostIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="validateExcelAddInAccountHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="getFMS6DataHttpPostIn">
+    <wsdl:part name="schoolID" type="s:string" />
+    <wsdl:part name="username" type="s:string" />
+    <wsdl:part name="password" type="s:string" />
+    <wsdl:part name="dataRequestType" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="getFMS6DataHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="testDatabaseConnectionHttpPostIn">
+    <wsdl:part name="schoolID" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="testDatabaseConnectionHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="TPReadOnlyDataServiceSoap">
+    <wsdl:operation name="findEntities">
+      <wsdl:input message="tns:findEntitiesSoapIn" />
+      <wsdl:output message="tns:findEntitiesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolID">
+      <wsdl:input message="tns:findEntitiesBySchoolIDSoapIn" />
+      <wsdl:output message="tns:findEntitiesBySchoolIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolIDAsXml">
+      <wsdl:input message="tns:findEntitiesBySchoolIDAsXmlSoapIn" />
+      <wsdl:output message="tns:findEntitiesBySchoolIDAsXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEntityData">
+      <wsdl:input message="tns:getEntityDataSoapIn" />
+      <wsdl:output message="tns:getEntityDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolID">
+      <wsdl:input message="tns:getEntityDataBySchoolIDSoapIn" />
+      <wsdl:output message="tns:getEntityDataBySchoolIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolIDAsXml">
+      <wsdl:input message="tns:getEntityDataBySchoolIDAsXmlSoapIn" />
+      <wsdl:output message="tns:getEntityDataBySchoolIDAsXmlSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInData">
+      <wsdl:input message="tns:getExcelAddInDataSoapIn" />
+      <wsdl:output message="tns:getExcelAddInDataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReportDataByKey">
+      <wsdl:input message="tns:getReportDataByKeySoapIn" />
+      <wsdl:output message="tns:getReportDataByKeySoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInColumns">
+      <wsdl:input message="tns:getExcelAddInColumnsSoapIn" />
+      <wsdl:output message="tns:getExcelAddInColumnsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validateExcelAddInAccount">
+      <wsdl:input message="tns:validateExcelAddInAccountSoapIn" />
+      <wsdl:output message="tns:validateExcelAddInAccountSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFMS6Data">
+      <wsdl:input message="tns:getFMS6DataSoapIn" />
+      <wsdl:output message="tns:getFMS6DataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="testDatabaseConnection">
+      <wsdl:input message="tns:testDatabaseConnectionSoapIn" />
+      <wsdl:output message="tns:testDatabaseConnectionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TPReadOnlyDataServiceHttpGet">
+    <wsdl:operation name="findEntities">
+      <wsdl:input message="tns:findEntitiesHttpGetIn" />
+      <wsdl:output message="tns:findEntitiesHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolID">
+      <wsdl:input message="tns:findEntitiesBySchoolIDHttpGetIn" />
+      <wsdl:output message="tns:findEntitiesBySchoolIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolIDAsXml">
+      <wsdl:input message="tns:findEntitiesBySchoolIDAsXmlHttpGetIn" />
+      <wsdl:output message="tns:findEntitiesBySchoolIDAsXmlHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEntityData">
+      <wsdl:input message="tns:getEntityDataHttpGetIn" />
+      <wsdl:output message="tns:getEntityDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolID">
+      <wsdl:input message="tns:getEntityDataBySchoolIDHttpGetIn" />
+      <wsdl:output message="tns:getEntityDataBySchoolIDHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolIDAsXml">
+      <wsdl:input message="tns:getEntityDataBySchoolIDAsXmlHttpGetIn" />
+      <wsdl:output message="tns:getEntityDataBySchoolIDAsXmlHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInData">
+      <wsdl:input message="tns:getExcelAddInDataHttpGetIn" />
+      <wsdl:output message="tns:getExcelAddInDataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReportDataByKey">
+      <wsdl:input message="tns:getReportDataByKeyHttpGetIn" />
+      <wsdl:output message="tns:getReportDataByKeyHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInColumns">
+      <wsdl:input message="tns:getExcelAddInColumnsHttpGetIn" />
+      <wsdl:output message="tns:getExcelAddInColumnsHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validateExcelAddInAccount">
+      <wsdl:input message="tns:validateExcelAddInAccountHttpGetIn" />
+      <wsdl:output message="tns:validateExcelAddInAccountHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFMS6Data">
+      <wsdl:input message="tns:getFMS6DataHttpGetIn" />
+      <wsdl:output message="tns:getFMS6DataHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="testDatabaseConnection">
+      <wsdl:input message="tns:testDatabaseConnectionHttpGetIn" />
+      <wsdl:output message="tns:testDatabaseConnectionHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="TPReadOnlyDataServiceHttpPost">
+    <wsdl:operation name="findEntities">
+      <wsdl:input message="tns:findEntitiesHttpPostIn" />
+      <wsdl:output message="tns:findEntitiesHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolID">
+      <wsdl:input message="tns:findEntitiesBySchoolIDHttpPostIn" />
+      <wsdl:output message="tns:findEntitiesBySchoolIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolIDAsXml">
+      <wsdl:input message="tns:findEntitiesBySchoolIDAsXmlHttpPostIn" />
+      <wsdl:output message="tns:findEntitiesBySchoolIDAsXmlHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEntityData">
+      <wsdl:input message="tns:getEntityDataHttpPostIn" />
+      <wsdl:output message="tns:getEntityDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolID">
+      <wsdl:input message="tns:getEntityDataBySchoolIDHttpPostIn" />
+      <wsdl:output message="tns:getEntityDataBySchoolIDHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolIDAsXml">
+      <wsdl:input message="tns:getEntityDataBySchoolIDAsXmlHttpPostIn" />
+      <wsdl:output message="tns:getEntityDataBySchoolIDAsXmlHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInData">
+      <wsdl:input message="tns:getExcelAddInDataHttpPostIn" />
+      <wsdl:output message="tns:getExcelAddInDataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getReportDataByKey">
+      <wsdl:input message="tns:getReportDataByKeyHttpPostIn" />
+      <wsdl:output message="tns:getReportDataByKeyHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInColumns">
+      <wsdl:input message="tns:getExcelAddInColumnsHttpPostIn" />
+      <wsdl:output message="tns:getExcelAddInColumnsHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="validateExcelAddInAccount">
+      <wsdl:input message="tns:validateExcelAddInAccountHttpPostIn" />
+      <wsdl:output message="tns:validateExcelAddInAccountHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getFMS6Data">
+      <wsdl:input message="tns:getFMS6DataHttpPostIn" />
+      <wsdl:output message="tns:getFMS6DataHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="testDatabaseConnection">
+      <wsdl:input message="tns:testDatabaseConnectionHttpPostIn" />
+      <wsdl:output message="tns:testDatabaseConnectionHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="TPReadOnlyDataServiceSoap" type="tns:TPReadOnlyDataServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findEntities">
+      <soap:operation soapAction="http://tempuri.org/findEntities" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolID">
+      <soap:operation soapAction="http://tempuri.org/findEntitiesBySchoolID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolIDAsXml">
+      <soap:operation soapAction="http://tempuri.org/findEntitiesBySchoolIDAsXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityData">
+      <soap:operation soapAction="http://tempuri.org/getEntityData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolID">
+      <soap:operation soapAction="http://tempuri.org/getEntityDataBySchoolID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolIDAsXml">
+      <soap:operation soapAction="http://tempuri.org/getEntityDataBySchoolIDAsXml" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInData">
+      <soap:operation soapAction="http://tempuri.org/getExcelAddInData" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReportDataByKey">
+      <soap:operation soapAction="http://tempuri.org/getReportDataByKey" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInColumns">
+      <soap:operation soapAction="http://tempuri.org/getExcelAddInColumns" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateExcelAddInAccount">
+      <soap:operation soapAction="http://tempuri.org/validateExcelAddInAccount" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFMS6Data">
+      <soap:operation soapAction="http://tempuri.org/getFMS6Data" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testDatabaseConnection">
+      <soap:operation soapAction="http://tempuri.org/testDatabaseConnection" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TPReadOnlyDataServiceSoap12" type="tns:TPReadOnlyDataServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="findEntities">
+      <soap12:operation soapAction="http://tempuri.org/findEntities" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolID">
+      <soap12:operation soapAction="http://tempuri.org/findEntitiesBySchoolID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolIDAsXml">
+      <soap12:operation soapAction="http://tempuri.org/findEntitiesBySchoolIDAsXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityData">
+      <soap12:operation soapAction="http://tempuri.org/getEntityData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolID">
+      <soap12:operation soapAction="http://tempuri.org/getEntityDataBySchoolID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolIDAsXml">
+      <soap12:operation soapAction="http://tempuri.org/getEntityDataBySchoolIDAsXml" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInData">
+      <soap12:operation soapAction="http://tempuri.org/getExcelAddInData" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReportDataByKey">
+      <soap12:operation soapAction="http://tempuri.org/getReportDataByKey" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInColumns">
+      <soap12:operation soapAction="http://tempuri.org/getExcelAddInColumns" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateExcelAddInAccount">
+      <soap12:operation soapAction="http://tempuri.org/validateExcelAddInAccount" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFMS6Data">
+      <soap12:operation soapAction="http://tempuri.org/getFMS6Data" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testDatabaseConnection">
+      <soap12:operation soapAction="http://tempuri.org/testDatabaseConnection" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TPReadOnlyDataServiceHttpGet" type="tns:TPReadOnlyDataServiceHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="findEntities">
+      <http:operation location="/findEntities" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolID">
+      <http:operation location="/findEntitiesBySchoolID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolIDAsXml">
+      <http:operation location="/findEntitiesBySchoolIDAsXml" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityData">
+      <http:operation location="/getEntityData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolID">
+      <http:operation location="/getEntityDataBySchoolID" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolIDAsXml">
+      <http:operation location="/getEntityDataBySchoolIDAsXml" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInData">
+      <http:operation location="/getExcelAddInData" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReportDataByKey">
+      <http:operation location="/getReportDataByKey" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInColumns">
+      <http:operation location="/getExcelAddInColumns" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateExcelAddInAccount">
+      <http:operation location="/validateExcelAddInAccount" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFMS6Data">
+      <http:operation location="/getFMS6Data" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testDatabaseConnection">
+      <http:operation location="/testDatabaseConnection" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="TPReadOnlyDataServiceHttpPost" type="tns:TPReadOnlyDataServiceHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="findEntities">
+      <http:operation location="/findEntities" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolID">
+      <http:operation location="/findEntitiesBySchoolID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="findEntitiesBySchoolIDAsXml">
+      <http:operation location="/findEntitiesBySchoolIDAsXml" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityData">
+      <http:operation location="/getEntityData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolID">
+      <http:operation location="/getEntityDataBySchoolID" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getEntityDataBySchoolIDAsXml">
+      <http:operation location="/getEntityDataBySchoolIDAsXml" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInData">
+      <http:operation location="/getExcelAddInData" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getReportDataByKey">
+      <http:operation location="/getReportDataByKey" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content part="Body" type="text/xml" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getExcelAddInColumns">
+      <http:operation location="/getExcelAddInColumns" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="validateExcelAddInAccount">
+      <http:operation location="/validateExcelAddInAccount" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getFMS6Data">
+      <http:operation location="/getFMS6Data" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="testDatabaseConnection">
+      <http:operation location="/testDatabaseConnection" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="TPReadOnlyDataService">
+    <wsdl:port name="TPReadOnlyDataServiceSoap" binding="tns:TPReadOnlyDataServiceSoap">
+      <soap:address location="http://bromcom.ashbyschool.org.uk/Nucleus/WebServices/ThirdParty/TPReadOnlyDataService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TPReadOnlyDataServiceSoap12" binding="tns:TPReadOnlyDataServiceSoap12">
+      <soap12:address location="http://bromcom.ashbyschool.org.uk/Nucleus/WebServices/ThirdParty/TPReadOnlyDataService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TPReadOnlyDataServiceHttpGet" binding="tns:TPReadOnlyDataServiceHttpGet">
+      <http:address location="http://bromcom.ashbyschool.org.uk/Nucleus/WebServices/ThirdParty/TPReadOnlyDataService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="TPReadOnlyDataServiceHttpPost" binding="tns:TPReadOnlyDataServiceHttpPost">
+      <http:address location="http://bromcom.ashbyschool.org.uk/Nucleus/WebServices/ThirdParty/TPReadOnlyDataService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
